@@ -1,2 +1,2 @@
-rootProject.name='AdminApplication'
+rootProject.name='AdminApplicationFinal'
 include ':app'

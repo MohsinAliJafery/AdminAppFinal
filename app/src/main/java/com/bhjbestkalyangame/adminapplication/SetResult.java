@@ -92,7 +92,7 @@ public class SetResult extends AppCompatActivity {
                 public void onClick(View view) {
                     mReference.child(mFrom).removeValue();
 
-                    for(int i= 0; i<mTotalNumber; i++) {
+                    for(int i=mTotalNumber-1; i>=0; i--) {
                         eT = findViewById(i);
                         mReference.child(mFrom).push().setValue(eT.getText().toString());
                     }

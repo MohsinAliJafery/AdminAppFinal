@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".KalyanWorkActivity">
 
     <Button
@@ -14,18 +15,19 @@
         android:text="Panel Free Game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/JoriButtonID"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.115" />
 
     <Button
         android:id="@+id/JoriButtonID"
         android:layout_width="290dp"
         android:layout_height="94dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:text="Jori Free Game"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SingleButtonID" />
 
@@ -62,7 +64,7 @@
         android:id="@+id/ResultViewNameID"
         android:layout_width="225dp"
         android:layout_height="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:text="Today Kalyan Free Game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

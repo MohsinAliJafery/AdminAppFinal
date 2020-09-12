@@ -38,7 +38,7 @@ public class Success extends AppCompatActivity {
         Numbers = new HashMap<String, String>();
         mDatabase = FirebaseDatabase.getInstance();
         mReference = mDatabase.getReference("current_lucky_numbers").child(mFrom);
-        mReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        mReference.orderByKey().addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 

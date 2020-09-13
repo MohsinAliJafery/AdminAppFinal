@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.widget.GridView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,9 +16,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class Success extends AppCompatActivity {
 
@@ -43,10 +47,13 @@ public class Success extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 Numbers = (HashMap<String, String>) snapshot.getValue();
-                Collection<String> HashMapValues = Numbers.values();
+                SortedSet<String> values = new TreeSet<String>(Numbers.values());
 
-                Values =  new ArrayList<>(HashMapValues);
+                Values =  new ArrayList<>();
+                Values.addAll(values);
+
                 populateGrid(Values);
+
 
             }
             @Override
@@ -60,6 +67,6 @@ public class Success extends AppCompatActivity {
     private void populateGrid(List<String> values) {
         GridView mGridView = findViewById(R.id.gridview_success);
         mGridView.setAdapter(new LuckyNumberAdapter(this, values));
-
     }
+
 }

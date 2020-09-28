@@ -50,7 +50,7 @@ public class KalyanWorkActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(KalyanWorkActivity.this, ChooseActivity.class);
-                intent.putExtra("mFrom","Jori");
+                intent.putExtra("mFrom","Jodi");
                 startActivity(intent);
                 finish();
             }

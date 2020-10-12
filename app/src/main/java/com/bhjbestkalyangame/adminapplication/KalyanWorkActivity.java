@@ -16,7 +16,7 @@ public class KalyanWorkActivity extends AppCompatActivity {
      private Calendar calendar;
      private SimpleDateFormat dateFormat;
      private  String date;
-     private Button singleGameButton;
+     private Button singleGameButton, mNotification;
      private  Button joriGameButton;
      private  Button panelGameButton;
     @Override
@@ -34,7 +34,7 @@ public class KalyanWorkActivity extends AppCompatActivity {
         singleGameButton = (Button) findViewById((R.id.SingleButtonID));
         joriGameButton =(Button) findViewById((R.id.JoriButtonID));
         panelGameButton =(Button) findViewById((R.id.PanelButtonID));
-
+        mNotification = findViewById(R.id.notification);
 
 
         singleGameButton.setOnClickListener(new View.OnClickListener() {
@@ -64,5 +64,16 @@ public class KalyanWorkActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        mNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KalyanWorkActivity.this, NotificationActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
     }
 }
